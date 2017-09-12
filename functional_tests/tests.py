@@ -135,5 +135,4 @@ class NewVisitorTest(StaticLiveServerTestCase):
             delta=10
         )
 
-        self.fail('Finish the test!')
-        browser.quit()
+        # Satisfied, she goes back to sleep
