@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn server for SITENAME
+
+[Service]
+Restart=on-failure
+User=rob
+WorkingDirectory=/home/rob/sites/SITENAME/source
+ExecStart=/home/rob/sites/SITENAME/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/SITENAME.socket \
+    django_tdd.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
