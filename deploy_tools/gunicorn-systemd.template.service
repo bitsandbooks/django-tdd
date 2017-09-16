@@ -5,7 +5,7 @@ Description=Gunicorn server for SITENAME
 Restart=on-failure
 User=rob
 WorkingDirectory=/home/rob/sites/SITENAME/source
-ExecStart=/home/rob/sites/SITENAME/virtualenv/bin/gunicorn \
+ExecStart=/home/rob/sites/SITENAME/venv/bin/gunicorn \
     --bind unix:/tmp/SITENAME.socket \
     django_tdd.wsgi:application
 
